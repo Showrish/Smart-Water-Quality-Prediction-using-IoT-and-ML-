@@ -129,6 +129,15 @@ The chatbot integrates with the **Gemini API** to provide ideal water parameters
 
 ---
 
+## Collaborators
+
+This project was collaboratively developed by:
+- **Showrish** – VU21CSEN0600005  
+- **Suhash** – VU21CSEN0600011  
+- **Dhanush** – VU21CSEN0600121  
+
+---
+
 ## License
 
 This project is licensed under the **MIT License**.  
