@@ -1,6 +1,6 @@
 # 🐟 Smart Water Quality Prediction for Aquaculture
 
-> Machine learning and IoT system that predicts and monitors water quality for aquaculture ponds, with a Streamlit monitoring dashboard, a Firebase web app and a Gemini-powered fish care chatbot.
+> Machine learning and IoT system that predicts and monitors water quality for aquaculture ponds, with a live Firebase web app and a Gemini-powered fish care chatbot.
 
 Undergraduate capstone project, GITAM University.
 
@@ -10,34 +10,11 @@ Undergraduate capstone project, GITAM University.
 
 - **Three deep learning models** (LSTM, GRU and CNN) built in TensorFlow/Keras to predict water potability and quality
 - **Key water parameters** analyzed, including pH, turbidity and total dissolved solids
-- **Streamlit monitoring dashboard** that pulls live sensor readings from ThingSpeak every 15 seconds, flags out-of-range values and reports data quality
-- **Firebase web app** with Realtime Database updates and Hosting
+- **Live web app** on Firebase Hosting, with Realtime Database updates
 - **Fish Water Quality Chatbot** that uses the Gemini API to recommend ideal water conditions for different fish species
+- **New in September 2026:** a Streamlit monitoring dashboard for live sensor data (see below)
 
 **Live web application:** [https://waterquality-1dcdc.web.app/](https://waterquality-1dcdc.web.app/)
-
----
-
-## 🖥️ Monitoring Dashboard
-
-### Live readings and range checks
-The dashboard reads from live ThingSpeak sensors, an uploaded ThingSpeak CSV export or sample data. It checks the latest pH, turbidity and dissolved solids readings against acceptable ranges and warns when the sensor data is stale.
-
-![Monitor overview](smart-water-quality-prediction/screenshots/monitor-overview.png)
-
-### Trends
-Each parameter is charted over time, with out-of-range readings highlighted against the acceptable band.
-
-![Trends](smart-water-quality-prediction/screenshots/trends.png)
-
-### Data quality and readings that need attention
-A per-parameter summary counts readings within range, out of range and missing, and a table lists every reading that needs attention, with the reason.
-
-![Data quality](smart-water-quality-prediction/screenshots/data-quality.png)
-
-### What the sensor data showed
-- **Turbidity was the main problem:** it was out of range in 47 of the last 50 readings.
-- **Some readings were physically impossible:** several show a pH above 14, the top of the pH scale, which points to a sensor fault or calibration issue rather than real water conditions.
 
 ---
 
@@ -46,7 +23,7 @@ A per-parameter summary counts readings within range, out of range and missing, 
 - Predict water potability and quality from real-time sensor data
 - Enable proactive management of aquaculture systems
 - Develop a modular and scalable machine learning pipeline
-- Provide real-time monitoring and visualization via ThingSpeak and Firebase
+- Provide real-time monitoring and visualization via Firebase
 
 ---
 
@@ -56,8 +33,7 @@ A per-parameter summary counts readings within range, out of range and missing, 
 - **TensorFlow / Keras**
 - **scikit-learn**
 - **Pandas**, **NumPy**
-- **Streamlit**
-- **ThingSpeak** (IoT sensor data)
+- **Flask**
 - **Firebase** (Realtime Database, Hosting)
 - **Matplotlib**, **Seaborn**
 - **Gemini API** (chatbot)
@@ -103,12 +79,10 @@ cd Smart-Water-Quality-Prediction-using-IoT-and-ML-
 pip install -r requirements.txt
 ```
 
-### Step 3: Run the Streamlit app
+### Step 3: Run the web app
 ```bash
-streamlit run app.py
+python app.py
 ```
-
-Then open `http://localhost:8501` in your browser.
 
 ---
 
@@ -126,12 +100,8 @@ Then open `http://localhost:8501` in your browser.
 ## 🚀 Key Features
 
 - Predicts water potability using deep learning models (LSTM, GRU and CNN)
-- Pulls live sensor readings from ThingSpeak, or works from an uploaded CSV export or sample data
-- Flags readings outside acceptable ranges for pH, turbidity and dissolved solids
-- Warns when sensor data is stale, so old readings aren't mistaken for current conditions
-- Reports data quality per parameter and lists every reading that needs attention
 - Visualizes trends in water quality data
-- Real-time updates through Firebase integration
+- Real-time monitoring through Firebase integration
 - Simple and clean web interface
 - Modular structure that's easy to extend with more sensors or models
 - Runs locally or in the cloud
@@ -155,6 +125,29 @@ The project includes a **Fish Water Quality Chatbot** built with **HTML, CSS and
 
 ---
 
+## 🆕 New: Streamlit Monitoring Dashboard (September 2026)
+
+I recently built a Streamlit dashboard that monitors the project's sensor data. Its code will be added to this repo soon. It reads from live ThingSpeak sensors, an uploaded ThingSpeak CSV export or sample data, then checks pH, turbidity and dissolved solids against acceptable ranges, warns when sensor data is stale and reports data quality.
+
+### Live readings and range checks
+![Monitor overview](screenshots/monitor-overview.png)
+
+### Trends
+Each parameter is charted over time, with out-of-range readings highlighted against the acceptable band.
+
+![Trends](screenshots/trends.png)
+
+### Data quality and readings that need attention
+A per-parameter summary counts readings within range, out of range and missing, and a table lists every reading that needs attention, with the reason.
+
+![Data quality](screenshots/data-quality.png)
+
+### What the sensor data showed
+- **Turbidity was the main problem:** it was out of range in 47 of the last 50 readings.
+- **Some readings were physically impossible:** several show a pH above 14, the top of the pH scale, which points to a sensor fault or calibration issue rather than real water conditions.
+
+---
+
 ## 🌊 Example Use Cases
 
 - Automated monitoring of aquaculture ponds
@@ -171,3 +164,9 @@ Developed as a team project by:
 - **Dhanush**
 
 Maintained by Showrish Reddy Sampath · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. You're free to use, modify and distribute it with appropriate attribution.
