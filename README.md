@@ -130,17 +130,17 @@ The project includes a **Fish Water Quality Chatbot** built with **HTML, CSS and
 I recently built a Streamlit dashboard that monitors the project's sensor data. Its code will be added to this repo soon. It reads from live ThingSpeak sensors, an uploaded ThingSpeak CSV export or sample data, then checks pH, turbidity and dissolved solids against acceptable ranges, warns when sensor data is stale and reports data quality.
 
 ### Live readings and range checks
-![Monitor overview](screenshots/monitor-overview.png)
+![Monitor overview](smart-water-quality-prediction/screenshots/monitor-overview.png)
 
 ### Trends
 Each parameter is charted over time, with out-of-range readings highlighted against the acceptable band.
 
-![Trends](screenshots/trends.png)
+![Trends](smart-water-quality-prediction/screenshots/trends.png)
 
 ### Data quality and readings that need attention
 A per-parameter summary counts readings within range, out of range and missing, and a table lists every reading that needs attention, with the reason.
 
-![Data quality](screenshots/data-quality.png)
+![Data quality](smart-water-quality-prediction/screenshots/data-quality.png)
 
 ### What the sensor data showed
 - **Turbidity was the main problem:** it was out of range in 47 of the last 50 readings.
