@@ -1,6 +1,6 @@
 # 🐟 Smart Water Quality Prediction for Aquaculture
 
-> Machine learning and IoT system that predicts and monitors water quality for aquaculture ponds, with a live Firebase web app and a Gemini-powered fish care chatbot.
+> Machine learning and IoT system that predicts and monitors water quality for aquaculture ponds, with a live Firebase web app.
 
 Undergraduate capstone project, GITAM University.
 
@@ -11,7 +11,7 @@ Undergraduate capstone project, GITAM University.
 - **Three deep learning models** (LSTM, GRU and CNN) built in TensorFlow/Keras to predict water potability and quality
 - **Key water parameters** analyzed, including pH, turbidity and total dissolved solids
 - **Live web app** on Firebase Hosting, with Realtime Database updates
-- **Fish Water Quality Chatbot** that uses the Gemini API to recommend ideal water conditions for different fish species
+- **Fish Water Conditions Lookup** that uses the Gemini API to return ideal water parameters for any fish species
 - **New in September 2026:** a Streamlit monitoring dashboard for live sensor data (see below)
 
 **Live web application:** [https://waterquality-1dcdc.web.app/](https://waterquality-1dcdc.web.app/)
@@ -36,8 +36,8 @@ Undergraduate capstone project, GITAM University.
 - **Flask**
 - **Firebase** (Realtime Database, Hosting)
 - **Matplotlib**, **Seaborn**
-- **Gemini API** (chatbot)
-- **HTML / CSS / JavaScript** (chatbot and frontend)
+- **Gemini API** (fish conditions lookup)
+- **HTML / CSS / JavaScript** (frontend and lookup tool)
 
 ---
 
@@ -57,9 +57,10 @@ smart-water-quality-prediction/
 │   ├── augmented_water_data.xlsx
 │   ├── water_data.xlsx
 │   └── water_potability.xlsx
-├── web/                     # Frontend chatbot files
+├── web/                     # Fish conditions lookup tool
 │   └── fish_water_quality_chatbot.html
 ├── templates/               # HTML templates
+├── screenshots/             # Streamlit dashboard screenshots
 ├── requirements.txt         # Python dependencies
 └── README.md                # Documentation
 ```
@@ -108,9 +109,9 @@ python app.py
 
 ---
 
-## 🤖 Fish Water Quality Chatbot
+## 🐠 Fish Water Conditions Lookup
 
-The project includes a **Fish Water Quality Chatbot** built with **HTML, CSS and JavaScript**. It uses the **Gemini API** to provide ideal water parameters for different fish species, including:
+The project includes a **Fish Water Conditions Lookup** built with **HTML, CSS and JavaScript**. Enter a fish species, and it uses the **Gemini API** to return the ideal water parameters for that species, including:
 
 - Recommended pH range
 - Turbidity (NTU)
