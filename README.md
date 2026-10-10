@@ -23,17 +23,17 @@ Undergraduate capstone project, GITAM University.
 ### Live readings and range checks
 The dashboard reads from live ThingSpeak sensors, an uploaded ThingSpeak CSV export or sample data. It checks the latest pH, turbidity and dissolved solids readings against acceptable ranges and warns when the sensor data is stale.
 
-![Monitor overview](screenshots/monitor-overview.png)
+![Monitor overview](smart-water-quality-prediction/screenshots/monitor-overview.png)
 
 ### Trends
 Each parameter is charted over time, with out-of-range readings highlighted against the acceptable band.
 
-![Trends](screenshots/trends.png)
+![Trends](smart-water-quality-prediction/screenshots/trends.png)
 
 ### Data quality and readings that need attention
 A per-parameter summary counts readings within range, out of range and missing, and a table lists every reading that needs attention, with the reason.
 
-![Data quality](screenshots/data-quality.png)
+![Data quality](smart-water-quality-prediction/screenshots/data-quality.png)
 
 ### What the sensor data showed
 - **Turbidity was the main problem:** it was out of range in 47 of the last 50 readings.
@@ -171,9 +171,3 @@ Developed as a team project by:
 - **Dhanush**
 
 Maintained by Showrish Reddy Sampath · [LinkedIn](https://linkedin.com/in/showrish-reddy-sampath-b508a22a6)
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**. You're free to use, modify and distribute it with appropriate attribution.
